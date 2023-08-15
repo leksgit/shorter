@@ -8,7 +8,7 @@ use App\Service\ShortService;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 
-class linksController extends Controller
+class LinksController extends Controller
 {
     /**
      * Render view for create new link

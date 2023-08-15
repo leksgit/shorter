@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\linksController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,4 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/addShort', []);
+Route::get('/addShort', [linksController::class, 'addShort']);
+Route::post('/addShort', [linksController::class, 'create'])->name('createShort');
+Route::get('{short}', [linksController::class, 'short']);

@@ -34,11 +34,29 @@ To connect to the console within the php-fpm container, use the following comman
 docker-compose exec php-fpm bash
 ```
 
+### Copy .env.example File
+Duplicate the .env.example file and rename it to .env:
+```bash
+cp .env.example .env
+```
+
+### Configure Environment Variables
+Edit the .env file and configure the necessary environment variables, such as database connection details.
+
+### Generate Application Key
+Generate the application key by running the following command:
+
+```bash
+php artisan key:generate
+```
+
 ### Install Dependencies and Build Frontend
 Inside the container's console, run the following commands to install the required dependencies and build the frontend assets:
 
 ```bash
-composer install && npm install && npm run build
+composer install
+npm install
+npm run build
 ```
 
 ### Run Database Migrations

@@ -62,7 +62,7 @@ class ShortService
                     });
 
             })
-            ->first(['source_url','id','allowed_number_of_uses','number_of_uses']);
+            ->firstOrFail(['source_url','id','allowed_number_of_uses','number_of_uses']);
         if ($this->checkAllowedOfUse($link)){
             $link->increment('number_of_uses');
             return redirect()->to($link->source_url);

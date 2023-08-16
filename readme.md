@@ -43,6 +43,16 @@ cp .env.example .env
 ### Configure Environment Variables
 Edit the .env file and configure the necessary environment variables, such as database connection details.
 
+```bash
+APP_URL=http://short.loc
+
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=laravel_db
+DB_USERNAME=laravel_user
+DB_PASSWORD=your_laravel_user_password
+```
 ### Generate Application Key
 Generate the application key by running the following command:
 
@@ -64,6 +74,13 @@ While still in the container's console, run the following command to apply the d
 
 ```bash
 php artisan migrate
+```
+
+### Run Test
+Execute the tests to ensure that the application is working as expected:
+
+```bash
+php artisan test
 ```
 
 ### Update Hosts File

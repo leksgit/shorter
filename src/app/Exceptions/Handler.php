@@ -33,7 +33,7 @@ class Handler extends ExceptionHandler
     public function render($request, Throwable $e)
     {
         if ($e instanceof NotFoundHttpException || $e instanceof ModelNotFoundException) {
-            return response()->view('short.404');
+            return response()->view('short.404',[], 404);
         }
         return parent::render($request, $e);
     }
